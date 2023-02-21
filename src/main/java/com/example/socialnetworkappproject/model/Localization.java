@@ -1,4 +1,4 @@
-package com.example.socialnetworkappproject;
+package com.example.socialnetworkappproject.model;
 
 import jakarta.persistence.*;
 import lombok.Getter;
