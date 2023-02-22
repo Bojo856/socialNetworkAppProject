@@ -13,28 +13,27 @@ import lombok.ToString;
 @ToString
 public class User {
 
-    public User(String email, String password, String name, String lastName, Role role, Localization localization) {
+    public User(String email, String password, String name, String lastName, Role role) {
         this.email = email;
         this.password = password;
         this.name = name;
         this.lastName = lastName;
         this.role = role;
-        this.localization = localization;
     }
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    @Column
+    @Column(nullable = false)
     private String email;
-    @Column
+    @Column(nullable = false)
     private String password;
-    @Column
+    @Column(nullable = false)
     private String name;
-    @Column
+    @Column(nullable = false)
     private String lastName;
-
     private Role role;
+
     @OneToOne
     private Localization localization;
 }
