@@ -33,7 +33,4 @@ public class User {
     @Column(nullable = false)
     private String lastName;
     private Role role;
-
-    @OneToOne
-    private Localization localization;
 }

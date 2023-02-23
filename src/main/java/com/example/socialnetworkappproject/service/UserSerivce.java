@@ -23,6 +23,10 @@ public class UserSerivce {
                 .collect(Collectors.toList());
     }
 
+    public User findById(Long id){
+        return rep.findById(id).orElseThrow(() -> new RuntimeException("User with id " + id + "not found"));
+    }
+
     public User save(User user) {
         return rep.save(user);
     }
